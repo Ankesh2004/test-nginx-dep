@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pontoon Nginx Smoke Test</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="hero">
+        <p class="eyebrow">Pontoon PaaS Test App</p>
+        <h1>Nginx is running behind your Pontoon route.</h1>
+        <p class="lede">
+          This container is built from GitHub, served by Nginx, and designed to
+          validate Pontoon's build, deployment, networking, health-check, and
+          Traefik routing pipeline.
+        </p>
+        <div class="actions">
+          <a href="/health" class="button primary">Health check</a>
+          <a href="/pontoon/status" class="button secondary">JSON status</a>
+        </div>
+      </section>
+
+      <section class="checks" aria-label="Pontoon deployment checks">
+        <article>
+          <span>01</span>
+          <h2>Docker build</h2>
+          <p>Pontoon can build this repository using the included Dockerfile.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h2>Port 80</h2>
+          <p>Nginx listens on port 80 for automatic container routing.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h2>Traefik route</h2>
+          <p>The generated subdomain should render this page through ingress.</p>
+        </article>
+        <article>
+          <span>04</span>
+          <h2>Lifecycle</h2>
+          <p>Use this app to test deploys, restarts, logs, and webhook updates.</p>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
